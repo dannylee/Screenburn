@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="0ad41b39-8e5e-4f54-966d-3c89f0b6c044" Publisher="CN=DannyLee" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>DeckBuilder</DisplayName>
+    <PublisherDisplayName>DannyLee</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="DeckBuilder.App">
+      <VisualElements DisplayName="DeckBuilder" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="DeckBuilder" ForegroundText="light" BackgroundColor="#464646">
+        <DefaultTile ShowName="allLogos" />
+        <SplashScreen Image="Assets\SplashScreen.png" />
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.fileTypeAssociation">
+          <FileTypeAssociation Name="json">
+            <EditFlags AlwaysUnsafe="true" />
+            <SupportedFileTypes>
+              <FileType>.json</FileType>
+            </SupportedFileTypes>
+          </FileTypeAssociation>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="documentsLibrary" />
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>
